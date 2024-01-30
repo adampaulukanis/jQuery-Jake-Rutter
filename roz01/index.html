@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jQuery --- wprowadzenie</title>
+    <script src="../jquery-3.7.0.js"></script>
+    <script>
+        $(document).ready(function (){
+            $('body').css('background-color', 'pink');
+        });
+    </script>
+    <script>
+        $(document).ready(function (){
+            $('.help-link').click(function () {
+                var linkHref = $(this).attr('href');
+                window.open(linkHref, 'help window', 'height=800,width=600,toolbar=no');
+                return false;
+            });
+        });
+    </script>
+    <style>
+.help-link {}
+    </style>
+  </head>
+  <body>
+    <h1>jQuery wprowadzenie</h1>
+    <p class="text" "title"="food is good for you">To jest mój przykładowy tekst.</p>
+    <hr>
+    <p>Kłopotliwy kod JavaScript:
+    <a href="javascript:window.open('help.html', 'help window',
+                 'height=800,width=600,toolbar=no')">Pomoc</a></p>
+    <hr>
+    <p>Użycie biblioteki jQuery do zapewnienia niekłopotliwego rozwiązania.
+    Gdyby została wyłączona obsługa JS, oferuje rozwiązanie awaryjne użytkownikom
+    w postaci kliknięcia odnośnika i skierowania na stronę pomocy.
+    <a href="help.html" class="help-link">Pomoc</a></p>
+  </body>
+</html>
+
